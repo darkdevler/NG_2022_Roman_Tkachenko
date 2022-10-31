@@ -7,8 +7,8 @@ for i in range(len(string)):
         try:
             allList[string[i].lower()] += 1
         except:
-            allList.setdefault(string[i].lower(), 1)
-        countList.append(string[i].lower())
+            allList.setdefault(string[i], 1)
+        countList.append(string[i])
 
 countList = list(set(countList))
 
