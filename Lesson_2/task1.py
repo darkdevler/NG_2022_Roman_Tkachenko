@@ -2,24 +2,24 @@ string = input("Enter string: ")
 allList = {}
 countList = []
 
-for i in range(len(string)):
-    if string[i] != " ":
+for element in range(len(string)):
+    if string[element] != " ":
         try:
-            allList[string[i].lower()] += 1
+            allList[string[element].lower()] += 1
         except:
-            allList.setdefault(string[i], 1)
-        countList.append(string[i])
+            allList.setdefault(string[element], 1)
+        countList.append(string[element])
 
 countList = list(set(countList))
 
 List = ""
-for i in range(len(countList)):
-    List += f"{countList[i]} - {allList[countList[i]]}; "
+for element in range(len(countList)):
+    List += f"{countList[element]} - {allList[countList[element]]}; "
 
 countList.sort()
 sortingList = ""
-for i in range(len(countList)):
-    sortingList += f"{countList[i]} - {allList[countList[i]]}; "
+for element in range(len(countList)):
+    sortingList += f"{countList[element]} - {allList[countList[element]]}; "
 
 print(f"List of all letters: {List}")
 print(f"Sorted list of all letters: {sortingList}")
